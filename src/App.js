@@ -8,6 +8,7 @@ import ToDoListTasks from "./ToDoListTasks";
 import ToDoListFooter from "./ToDoListFooter";
 
 class App extends React.Component {
+    filterValue = "All";
     tasks = [
         {title: 'CSS', isDone: true, priority: 'High'},
         {title: 'HTML', isDone: true, priority: 'High'},
@@ -15,13 +16,14 @@ class App extends React.Component {
         {title: 'ReactJS', isDone: true, priority: 'Low'},
         {title: 'Yo', isDone: false, priority: 'Low'}
     ];
+
     render = () => {
         return (
             <div className="App">
                 <div className="todoList">
                     <ToDoListHeader/>
                     <ToDoListTasks tasks={this.tasks}/>
-                    <ToDoListFooter filterValue={"Completed"}/>
+                    <ToDoListFooter filterValue={this.filterValue}/>
                 </div>
             </div>
         );
