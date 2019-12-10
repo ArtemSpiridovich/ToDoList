@@ -9,11 +9,17 @@ import ToDoListFooter from "./ToDoListFooter";
 
 class App extends React.Component {
     render = () => {
+        let tasks = [
+            {title: 'CSS', isDone: true},
+            {title: 'HTML', isDone: true},
+            {title: 'JS', isDone: false},
+            {title: 'ReactJS', isDone: true}
+        ];
         return (
             <div className="App">
                 <div className="todoList">
                     <ToDoListHeader/>
-                    <ToDoListTasks/>
+                    <ToDoListTasks tasks={tasks}/>
                     <ToDoListFooter/>
                 </div>
             </div>
