@@ -21,7 +21,7 @@ class App extends React.Component {
                 <div className="todoList">
                     <ToDoListHeader/>
                     <ToDoListTasks tasks={this.tasks}/>
-                    <ToDoListFooter/>
+                    <ToDoListFooter filterValue={"Completed"}/>
                 </div>
             </div>
         );
