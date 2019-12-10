@@ -13,7 +13,8 @@ class App extends React.Component {
             {title: 'CSS', isDone: true},
             {title: 'HTML', isDone: true},
             {title: 'JS', isDone: false},
-            {title: 'ReactJS', isDone: true}
+            {title: 'ReactJS', isDone: true},
+            {title: 'Yo', isDone: false}
         ];
         return (
             <div className="App">
