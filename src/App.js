@@ -10,9 +10,8 @@ import ToDoListFooter from "./ToDoListFooter";
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.newTaskTitleRef = React.createRef();
         setTimeout(() => {
-                let newTask = {title: 'Rudy', isDone: true, priority: 'High'};
+                let newTask = {title: 'Rudy', isDone: true, priority: 'Low'};
                 let newTasks = [...this.state.tasks, newTask];
                 this.setState({
                     tasks: newTasks
@@ -29,15 +28,31 @@ class App extends React.Component {
             {title: 'JS', isDone: false, priority: 'Low'},
             {title: 'ReactJS', isDone: true, priority: 'Low'},
             {title: 'Yo', isDone: false, priority: 'Low'}
-        ],
-        filterValue: "All"
+        ]
     }
 
+    changeStatus = (task, isDone) => {
+        let newTask = this.state.tasks.map(t => {
+            if(t !== task){
+                return t;
+            } else {
+                return {...t, isDone: isDone}
+            }
+        });
+        this.setState({
+            tasks: newTask
+        })
+}
 
-    onAddNewTaskOnClick = () => {
-        let newText = this.newTaskTitleRef.current.value;
-        this.newTaskTitleRef.current.value = ''
-        let newTask = {title: newText, isDone: true, priority: 'High'};
+    changeFilter = (NewFilterValue) => {
+        this.setState({
+            filterValue: NewFilterValue
+        })
+
+    }
+
+    addTask = (newTitle) => {
+        let newTask = {title: newTitle, isDone: false, priority: 'Low'};
         let newTasks = [...this.state.tasks, newTask];
         this.setState({
             tasks: newTasks
@@ -49,16 +64,16 @@ class App extends React.Component {
         return (
             <div className="App">
                 <div className="todoList">
-                    {/*<ToDoListHeader/>*/}
-                    <div className="todoList-header">
-                        <h3 className="todoList-header__title">What to Learn</h3>
-                        <div className="todoList-newTaskForm">
-                            <input ref={this.newTaskTitleRef} type="text" placeholder="New task name"/>
-                            <button onClick={this.onAddNewTaskOnClick}>Add</button>
-                        </div>
-                    </div>
-                    <ToDoListTasks tasks={this.state.tasks}/>
-                    <ToDoListFooter filterValue={this.state.filterValue}/>
+                    <ToDoListHeader addTask={this.addTask}/>
+                    <ToDoListTasks changeStatus = {this.changeStatus} tasks={this.state.tasks.filter(t => {
+                        if (this.state.filterValue === "All")
+                            return true;
+                        if (this.state.filterValue === "Completed")
+                            return t.isDone === true;
+                        if (this.state.filterValue === "Active")
+                            return t.isDone === false;
+                    })}/>
+                    <ToDoListFooter changeFilter={this.changeFilter} filterValue={this.state.filterValue}/>
                 </div>
             </div>
         );
