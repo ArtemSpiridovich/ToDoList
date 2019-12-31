@@ -8,18 +8,6 @@ import ToDoListTasks from "./ToDoListTasks";
 import ToDoListFooter from "./ToDoListFooter";
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        setTimeout(() => {
-                let newTask = {title: 'Rudy', isDone: true, priority: 'Low'};
-                let newTasks = [...this.state.tasks, newTask];
-                this.setState({
-                    tasks: newTasks
-                });
-            }
-            , 2000);
-
-    }
 
     state = {
         tasks: [
@@ -28,7 +16,8 @@ class App extends React.Component {
             {title: 'JS', isDone: false, priority: 'Low'},
             {title: 'ReactJS', isDone: true, priority: 'Low'},
             {title: 'Yo', isDone: false, priority: 'Low'}
-        ]
+        ],
+        filterValue: 'All'
     }
 
     changeStatus = (task, isDone) => {

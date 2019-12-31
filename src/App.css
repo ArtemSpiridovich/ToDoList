@@ -11,10 +11,18 @@
   padding: 10px;
 }
 
-.todoList-task {
-
-}
-
 .filter-active{
   background-color: blue;
+}
+
+.error {
+  border-color: red;
+}
+
+.todoList-task .done {
+  opacity: 0.5;
+}
+
+.class-button{
+  display: flex;
 }
