@@ -4,8 +4,6 @@
     <list default="true" id="e612848e-da96-49c7-aff2-a9f504f8e6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoListTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListTask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListTasks.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1578048125970" duration="117000" />
       <workItem from="1578048320234" duration="179000" />
       <workItem from="1578140894384" duration="2427000" />
-      <workItem from="1578496390617" duration="6196000" />
+      <workItem from="1578496390617" duration="10752000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1575893887981</created>
@@ -187,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577792616731</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="lesson-6 7task">
+      <created>1578503121553</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578503121553</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +224,8 @@
     <MESSAGE value="lesson-2-task-10" />
     <MESSAGE value="lesson-4-task-9" />
     <MESSAGE value="lesson-5 and HomeWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson-5 and HomeWork" />
+    <MESSAGE value="lesson-6 7task" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson-6 7task" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Notifications" timestamp="1577305379546">
