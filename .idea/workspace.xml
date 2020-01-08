@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e612848e-da96-49c7-aff2-a9f504f8e6ef" name="Default Changelist" comment="lesson-4-task-9">
-      <change afterPath="$PROJECT_DIR$/src/Button.js" afterDir="false" />
+    <list default="true" id="e612848e-da96-49c7-aff2-a9f504f8e6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoListFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoListHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoListTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoListTasks.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test1/counter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,15 +53,15 @@
       <command value="yarn start" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -92,7 +90,11 @@
       <workItem from="1577279685767" duration="9000" />
       <workItem from="1577305178790" duration="14061000" />
       <workItem from="1577528891988" duration="636000" />
-      <workItem from="1577716434144" duration="13022000" />
+      <workItem from="1577716434144" duration="13744000" />
+      <workItem from="1578048125970" duration="117000" />
+      <workItem from="1578048320234" duration="179000" />
+      <workItem from="1578140894384" duration="2427000" />
+      <workItem from="1578496390617" duration="6196000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1575893887981</created>
@@ -178,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577125624278</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="lesson-5 and HomeWork">
+      <created>1577792616731</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577792616731</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,45 +218,46 @@
     <MESSAGE value="lesson-2-task-9" />
     <MESSAGE value="lesson-2-task-10" />
     <MESSAGE value="lesson-4-task-9" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson-4-task-9" />
+    <MESSAGE value="lesson-5 and HomeWork" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson-5 and HomeWork" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Notifications" timestamp="1577305379546">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1577305379546" />
-    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1577471077452">
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1577792614531">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1577471077452" />
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1577792614531" />
     <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1577718321109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1577718321109" />
-    <state width="1259" height="143" key="GridCell.Tab.0.bottom" timestamp="1577792364471">
+    <state width="1259" height="143" key="GridCell.Tab.0.bottom" timestamp="1577797831799">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="143" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1577792364471" />
-    <state width="1259" height="143" key="GridCell.Tab.0.center" timestamp="1577792364470">
+    <state width="1259" height="143" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1577797831799" />
+    <state width="1259" height="143" key="GridCell.Tab.0.center" timestamp="1577797831798">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="143" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1577792364470" />
-    <state width="1259" height="143" key="GridCell.Tab.0.left" timestamp="1577792364469">
+    <state width="1259" height="143" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1577797831798" />
+    <state width="1259" height="143" key="GridCell.Tab.0.left" timestamp="1577797831798">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="143" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1577792364469" />
-    <state width="1259" height="143" key="GridCell.Tab.0.right" timestamp="1577792364471">
+    <state width="1259" height="143" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1577797831798" />
+    <state width="1259" height="143" key="GridCell.Tab.0.right" timestamp="1577797831798">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="143" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1577792364471" />
+    <state width="1259" height="143" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1577797831798" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1577262107388">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1577262107388" />
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1577471085627">
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1577792623197">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1577471085627" />
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1577792623197" />
     <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1577792154453">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
