@@ -1,9 +1,12 @@
 .App {
-
+  display: flex;
 }
 
 .todoList {
-  width: 500px;
+  width: 300px;
+}
+
+.todoList h3 {
   margin: 0 auto;
 }
 
