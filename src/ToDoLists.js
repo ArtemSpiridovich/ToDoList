@@ -33,7 +33,7 @@ class ToDoLists extends React.Component {
             tasks: [],
             filterValue: 'All'
         }
-        let stateAsString = localStorage.getItem('our-state');
+        let stateAsString = localStorage.getItem('our-state' +this.props.id);
         if (stateAsString !== null) {
             state = JSON.parse(stateAsString)
         }

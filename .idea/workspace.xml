@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e612848e-da96-49c7-aff2-a9f504f8e6ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ToDoListTitle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ToDoLists.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoListHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddNewItemForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoLists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoLists.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +96,9 @@
       <workItem from="1578496390617" duration="11714000" />
       <workItem from="1578569425612" duration="57000" />
       <workItem from="1578574165036" duration="8898000" />
-      <workItem from="1579023432676" duration="6860000" />
+      <workItem from="1579023432676" duration="7114000" />
+      <workItem from="1579085296658" duration="23000" />
+      <workItem from="1579175856573" duration="3561000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1575893887981</created>
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578509341309</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="7 lesson true">
+      <created>1579082255313</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579082255313</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +246,8 @@
     <MESSAGE value="lesson-5 and HomeWork" />
     <MESSAGE value="lesson-6 7task" />
     <MESSAGE value="6 сука урок!!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 сука урок!!!!!!!" />
+    <MESSAGE value="7 lesson true" />
+    <option name="LAST_COMMIT_MESSAGE" value="7 lesson true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Notifications" timestamp="1577305379546">

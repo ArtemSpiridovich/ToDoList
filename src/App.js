@@ -11,11 +11,9 @@ class App extends React.Component {
 
 
     state = {
-        todolist: [
-            {id: 0, title: 'wer'}
-        ]
+        todolist: []
     }
-    nextToDoListId: 0
+    nextToDoListId = 0
 
     componentDidMount() {
         this.restoreState();
@@ -29,8 +27,7 @@ class App extends React.Component {
 
     restoreState = () => {
         let state = {
-            tasks: [],
-            filterValue: 'All'
+            todolist: []
         }
         let stateAsString = localStorage.getItem('our-state');
         if (stateAsString !== null) {
