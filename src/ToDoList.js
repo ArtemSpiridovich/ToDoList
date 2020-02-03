@@ -7,71 +7,29 @@ import AddNewItemForm from "./AddNewItemForm";
 import ToDoListTasks from "./ToDoListTasks";
 import ToDoListFooter from "./ToDoListFooter";
 import ToDoListTitle from "./ToDoListTitle";
-import {addTaskAC} from "./redux/reducer";
+import {addTaskAC, changeFilterAC, changeTaskAC} from "./redux/reducer";
 import {connect} from "react-redux";
 
 class ToDoList extends React.Component {
 
-    state = {
-        tasks: [],
-        filterValue: 'All',
-        nextTaskId: 1
-    }
-
     changeStatus = (taskId, isDone) => {
         this.changeTask(taskId, {isDone: isDone})
-        // let newTask = this.state.tasks.map(t => {
-        //     if(t.id !== taskId){
-        //         return t;
-        //     } else {
-        //         return {...t, isDone: isDone}
-        //     }
-        // });
-        // this.setState({
-        //     tasks: newTask
-        // })
     };
 
     changeInput = (titleId, title) => {
         this.changeTask(titleId, {title: title})
-        // let newTitle = this.state.tasks.map(t => {
-        //     if(t.id === titleId){
-        //         return {...t, title: title}
-        //     } else {
-        //         return {...t}
-        //     }
-        // })
-        // this.setState({
-        //     tasks: newTitle
-        // })
     }
 
     changeTask = (taskId, obj) => {
-        let newTasks = this.state.tasks.map(t => {
-            if (t.id !== taskId) {
-                return t
-            } else {
-                return {...t, ...obj}
-            }
-        })
-        this.setState({
-            tasks: newTasks
-        })
+        this.props.changeTask(taskId, obj, this.props.id)
     }
 
     changeFilter = (NewFilterValue) => {
-        this.setState({
-            filterValue: NewFilterValue
-        })
-
+        this.props.changeFilter(NewFilterValue, this.props.id)
     }
 
     addTask = (newTitle) => {
-        let newTask = {id: this.state.nextTaskId++, title: newTitle, isDone: false, priority: 'Low'};
-        // let newTasks = [...this.state.tasks, newTask];
-        // this.setState({
-        //     tasks: newTasks
-        // });
+        let newTask = {id: this.props.nextTaskId, title: newTitle, isDone: false, priority: 'Low'};
         this.props.addTask(newTask, this.props.id)
     }
 
@@ -81,16 +39,16 @@ class ToDoList extends React.Component {
             <div className="todoList">
                     <ToDoListTitle title={this.props.title} id={this.props.id}/>
                     <AddNewItemForm addItem={this.addTask}/>
-                    <ToDoListTasks changeStatus={this.changeStatus} changeInput={this.changeInput} state={this.state}
+                    <ToDoListTasks changeStatus={this.changeStatus} changeInput={this.changeInput}
                                    tasks={this.props.tasks.filter(t => {
-                                       if (this.state.filterValue === "All")
+                                       if (this.props.filterValue === "All")
                                            return true;
-                                       if (this.state.filterValue === "Completed")
+                                       if (this.props.filterValue === "Completed")
                                            return t.isDone === true;
-                                       if (this.state.filterValue === "Active")
+                                       if (this.props.filterValue === "Active")
                                            return t.isDone === false;
                                    })}/>
-                    <ToDoListFooter changeFilter={this.changeFilter} filterValue={this.state.filterValue}/>
+                    <ToDoListFooter changeFilter={this.changeFilter} filterValue={this.props.filterValue}/>
             </div>
         );
     }
@@ -100,8 +58,15 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addTask: (newTask, todolistId) => {
             dispatch(addTaskAC(newTask, todolistId))
+        },
+        changeTask: (taskId, newTask, todolistId) => {
+            dispatch(changeTaskAC(taskId, newTask, todolistId))
+        },
+        changeFilter: (NewFilterValue, todolistId) => {
+            dispatch(changeFilterAC(NewFilterValue, todolistId))
         }
     }
+
 }
 
 const ConnectedTodoList = connect(null, mapDispatchToProps)(ToDoList)

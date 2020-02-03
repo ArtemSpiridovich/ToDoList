@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e612848e-da96-49c7-aff2-a9f504f8e6ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoLists.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +26,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1UjyvV14mCygMIDHltawcdClZDL" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -41,7 +38,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -109,7 +106,10 @@
       <workItem from="1579628295903" duration="10000" />
       <workItem from="1580560369482" duration="650000" />
       <workItem from="1580633621946" duration="8357000" />
-      <workItem from="1580662599706" duration="5010000" />
+      <workItem from="1580662599706" duration="5269000" />
+      <workItem from="1580705541771" duration="189000" />
+      <workItem from="1580705734998" duration="1131000" />
+      <workItem from="1580706886640" duration="1767000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1575893887981</created>
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579186806899</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="todolist in redux">
+      <created>1580668287765</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1580668287765</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +281,8 @@
     <MESSAGE value="6 сука урок!!!!!!!" />
     <MESSAGE value="7 lesson true" />
     <MESSAGE value="7 lesson without error" />
-    <option name="LAST_COMMIT_MESSAGE" value="7 lesson without error" />
+    <MESSAGE value="todolist in redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="todolist in redux" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Notifications" timestamp="1577305379546">

@@ -11,35 +11,26 @@ import {addTodoListAC} from "./redux/reducer";
 
 class App extends React.Component {
 
-
-    state = {
-        todolists: []
-    }
-
     nextToDoListId = 0
 
     addItem = (newTitle) => {
-        let newtodolist = {id: this.nextToDoListId, title: newTitle, tasks: []};
-        // let newList = [...this.state.todolists, newtodolist];
+        let newtodolist = {id: this.nextToDoListId, title: newTitle, filterValue: 'All', nextTaskId: 1, tasks: []};
         ++this.nextToDoListId;
-        // this.setState({
-        //     todolists: newList
-        // });
         this.props.addItem(newtodolist)
     }
 
 
     render = () => {
-        debugger
-        const newtodolists = this.props.todolists.map(ti =>
-            <ConnectedTodoList id={ti.id} title={ti.title} tasks={ti.tasks}/>
+        const newtodolists = this.props.todolists.map(tl =>
+            <ConnectedTodoList id={tl.id} title={tl.title} filterValue={tl.filterValue} nextTaskId={tl.nextTaskId}
+                               tasks={tl.tasks}/>
         )
         return (
             <div>
                 <AddNewItemForm addItem={this.addItem}/>
-            <div className="App">
-                {newtodolists}
-            </div>
+                <div className="App">
+                    {newtodolists}
+                </div>
             </div>
         );
     }
