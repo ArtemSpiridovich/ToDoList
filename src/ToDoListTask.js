@@ -4,19 +4,18 @@ import './App.css';
 class ToDoListTask extends React.Component {
 
     state = {
-        EditMod: false
+        editMode: false
     }
-
 
     activateEditMod = () => {
         this.setState({
-            EditMod: true
+            editMode: true
         })
     };
 
     onDeactivateEditMode = () => {
         this.setState({
-            EditMod: false
+            editMode: false
         })
     };
 
@@ -28,17 +27,22 @@ class ToDoListTask extends React.Component {
         this.props.changeStatus(this.props.task.id, e.currentTarget.checked);
     }
 
+    onDeleteTask = () => {
+        this.props.onDeleteTask(this.props.task.id)
+    }
+
     render = () => {
         let ClassForCheckBox = this.props.task.isDone === true ? 'done' : '';
         return (
             <div className="todoList-task">
                 <input className={ClassForCheckBox} type="checkbox" checked={this.props.task.isDone}
                        onChange={this.onIsDoneChanged}/>
-                {this.state.EditMod
+                {this.state.editMode
                     ? <input onBlur={this.onDeactivateEditMode} onChange={this.onChangeInput} autoFocus={true} value = {this.props.task.title}/>
                     : <span onClick={this.activateEditMod}
                           className={ClassForCheckBox}>{this.props.task.id}- {this.props.task.title}</span>
                 }, priority: {this.props.task.priority}
+                <button onClick={this.onDeleteTask}>X</button>
             </div>
         );
     }

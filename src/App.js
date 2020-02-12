@@ -7,7 +7,7 @@ import './ToDoListFooter.js';
 import ConnectedTodoList from "./ToDoList";
 import AddNewItemForm from "./AddNewItemForm";
 import {connect} from "react-redux";
-import {addTodoListAC} from "./redux/reducer";
+import {addTodoListAC, onDeleteTodoListAC} from "./redux/reducer";
 
 class App extends React.Component {
 
@@ -19,11 +19,15 @@ class App extends React.Component {
         this.props.addItem(newtodolist)
     }
 
+    onDeleteTodoList = (todolistId) => {
+        this.props.onDeleteTodoList(todolistId)
+    }
+
 
     render = () => {
         const newtodolists = this.props.todolists.map(tl =>
             <ConnectedTodoList id={tl.id} title={tl.title} filterValue={tl.filterValue} nextTaskId={tl.nextTaskId}
-                               tasks={tl.tasks}/>
+                               tasks={tl.tasks} onDeleteTodoList={this.onDeleteTodoList}/>
         )
         return (
             <div>
@@ -46,6 +50,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addItem: (NewList) => {
             dispatch(addTodoListAC(NewList))
+        },
+        onDeleteTodoList: (todolistId) => {
+            dispatch(onDeleteTodoListAC(todolistId))
         }
     }
 }

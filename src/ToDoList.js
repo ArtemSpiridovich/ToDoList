@@ -7,7 +7,7 @@ import AddNewItemForm from "./AddNewItemForm";
 import ToDoListTasks from "./ToDoListTasks";
 import ToDoListFooter from "./ToDoListFooter";
 import ToDoListTitle from "./ToDoListTitle";
-import {addTaskAC, changeFilterAC, changeTaskAC} from "./redux/reducer";
+import {addTaskAC, changeFilterAC, changeTaskAC, onDeleteTaskAC} from "./redux/reducer";
 import {connect} from "react-redux";
 
 class ToDoList extends React.Component {
@@ -33,13 +33,17 @@ class ToDoList extends React.Component {
         this.props.addTask(newTask, this.props.id)
     }
 
+    onDeleteTask = (taskId) => {
+        this.props.onDeleteTask(taskId, this.props.id)
+    }
+
 
     render = () => {
         return (
             <div className="todoList">
-                    <ToDoListTitle title={this.props.title} id={this.props.id}/>
+                    <ToDoListTitle onDeleteTodoList={this.props.onDeleteTodoList} title={this.props.title} id={this.props.id}/>
                     <AddNewItemForm addItem={this.addTask}/>
-                    <ToDoListTasks changeStatus={this.changeStatus} changeInput={this.changeInput}
+                    <ToDoListTasks onDeleteTask={this.onDeleteTask} changeStatus={this.changeStatus} changeInput={this.changeInput}
                                    tasks={this.props.tasks.filter(t => {
                                        if (this.props.filterValue === "All")
                                            return true;
@@ -64,6 +68,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         changeFilter: (NewFilterValue, todolistId) => {
             dispatch(changeFilterAC(NewFilterValue, todolistId))
+        },
+        onDeleteTask: (taskId, todolistId) => {
+            dispatch(onDeleteTaskAC(taskId, todolistId))
         }
     }
 

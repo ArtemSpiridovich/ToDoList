@@ -9,32 +9,32 @@ const DELETE_TASK = 'DELETE_TASK'
 let initialstate = {todolists: []}
 
 const TodoListReducer = (state = initialstate, action) => {
-    switch(action.type){
+    switch (action.type) {
         case(ADD_TODOLIST):
             return {
                 ...state,
                 todolists: [...state.todolists, action.newTodolist]
             }
         case(ADD_TASK):
-            return{
-            ...state,
-            todolists: state.todolists.map(tl => {
-                    if(action.todolistId === tl.id) {
-                       return {...tl, nextTaskId: tl.nextTaskId+1 ,tasks: [...tl.tasks, action.newTask]}
+            return {
+                ...state,
+                todolists: state.todolists.map(tl => {
+                    if (action.todolistId === tl.id) {
+                        return {...tl, nextTaskId: tl.nextTaskId + 1, tasks: [...tl.tasks, action.newTask]}
                     } else {
-                       return tl
+                        return tl
                     }
                 })
             }
         case(CHANGE_TASK):
-            return{
+            return {
                 ...state,
                 todolists: state.todolists.map(tl => {
-                    if(action.todolistId === tl.id) {
-                        return{
+                    if (action.todolistId === tl.id) {
+                        return {
                             ...tl,
                             tasks: tl.tasks.map(t => {
-                                if(action.taskId === t.id){
+                                if (action.taskId === t.id) {
                                     return {...t, ...action.newTask}
                                 } else {
                                     return t
@@ -50,10 +50,33 @@ const TodoListReducer = (state = initialstate, action) => {
             return {
                 ...state,
                 todolists: state.todolists.map(tl => {
-                    if(action.todolistId === tl.id) {
+                    if (action.todolistId === tl.id) {
                         return {
                             ...tl,
                             filterValue: action.newFilter
+                        }
+                    } else {
+                        return tl
+                    }
+                })
+            }
+        case(DELETE_TODOLIST):
+            return {
+                ...state,
+                todolists: state.todolists.filter(tl => {
+                    return tl.id !== action.todolistId
+                })
+            }
+        case(DELETE_TASK):
+            return {
+                ...state,
+                todolists: state.todolists.map(tl => {
+                    if (action.todolistId === tl.id) {
+                        return {
+                            ...tl,
+                            tasks: tl.tasks.filter(t => {
+                                return action.taskId !== t.id
+                            })
                         }
                     } else {
                         return tl
@@ -66,14 +89,14 @@ const TodoListReducer = (state = initialstate, action) => {
 }
 
 export const addTodoListAC = (newTodolist) => {
-    return{
+    return {
         type: ADD_TODOLIST,
         newTodolist
     }
 }
 
 export const addTaskAC = (newTask, todolistId) => {
-    return{
+    return {
         type: ADD_TASK,
         newTask,
         todolistId
@@ -81,7 +104,7 @@ export const addTaskAC = (newTask, todolistId) => {
 }
 
 export const changeTaskAC = (taskId, newTask, todolistId) => {
-    return{
+    return {
         type: CHANGE_TASK,
         taskId,
         newTask,
@@ -90,9 +113,24 @@ export const changeTaskAC = (taskId, newTask, todolistId) => {
 }
 
 export const changeFilterAC = (newFilter, todolistId) => {
-    return{
+    return {
         type: CHANGE_FILTER,
         newFilter,
+        todolistId
+    }
+}
+
+export const onDeleteTodoListAC = (todolistId) => {
+    return {
+        type: DELETE_TODOLIST,
+        todolistId
+    }
+}
+
+export const onDeleteTaskAC = (taskId, todolistId) => {
+    return {
+        type: DELETE_TASK,
+        taskId,
         todolistId
     }
 }
